@@ -42,3 +42,4 @@ foreach($equipos as $i){
     echo "<br>";
 }
 echo "<hr>";
+echo "<hr>";
