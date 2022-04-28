@@ -11,21 +11,37 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container-xxl" style="margin: 14% auto;">
+  <div class="container-xxl" style="margin: 14% auto;">
       <div class="row justify-content-md-center">
         <div class="col-md-6">
-          <h1 class="text-center">LA LANGOSTA AHUMADA   </h1>
-          <form action="./Servidores/Eje2.php" method="post" class="d-flex justify-content-center flex-column">
+          <h1 class="text-center">Uveria   </h1>
+          <form class="d-flex justify-content-center flex-column">
+            <?php 
+                $kilos = $_POST['kilos'];
+                $tipo = $_POST['tipo'];
+                $tamaño = $_POST['tamano'];
+                $precioKilo = 2000;
+                $embarcacion = 0;
+                switch($tipo){
+                    case 'A':
+                        if($tamaño==1){
+                            $embarcacion = ($precioKilo*$kilos)+2000;
+                        }elseif($tamaño==2){
+                            $embarcacion = ($precioKilo*$kilos)+1000;
+                        }
+                        break;
+                    case 'B':
+                        if($tamaño==1){
+                            $embarcacion = ($precioKilo*$kilos)-500;
+                        }elseif($tamaño==2){
+                            $embarcacion = ($precioKilo*$kilos)-900;
+                        }
+                        break;
+                }
+            ?>
             <div class="mb-3">
-              <label for="personas" class="form-label">Cantidad de personas:</label>
-              <input type="number" name="personas" class="form-control" id="personas1">
+            <label class="form-label"><b>El coste de la embarcación es: $<?php echo $embarcacion;?></b></label>
             </div>
-            <div class="mb-3">
-              <label class="form-label"><b>Plato por persona menor a 200 personas: $14.000</b> </label>
-              <label class="form-label"><b>Plato por persona entre 200 y 300 personas: $11.000</b> </label>
-              <label class="form-label"><b>Plato por persona mayor a 300 personas: $9.000</b> </label>
-            </div>
-            <button type="" class="btn btn-outline-danger">Calcular</button>
           </form>
         </div>
       </div>

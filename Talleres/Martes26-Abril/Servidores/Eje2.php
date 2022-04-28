@@ -12,37 +12,38 @@
   </head>
   <body>
     <div class="container-xxl" style="margin: 14% auto;">
-      <div class="row justify-content-md-center">
-        <div class="col-md-6">
-          <h1 class="text-center">LA LANGOSTA AHUMADA</h1>
-          <form action="./Servidores/Eje1.php" method="post" class="d-flex justify-content-center flex-column">
-            <div class="mb-3">
-              <label for="alto" class="form-label">Alto de la piscina</label>
-              <input type="number" name="alto" class="form-control" id="alto1">
-            </div>
-            <div class="mb-3">
-              <label for="largo" class="form-label">Largo de la piscina</label>
-              <input type="number" name="largo" class="form-control" id="largo1">
-            </div>
-            <div class="mb-3">
-              <label for="ancho" class="form-label">Ancho de la piscina</label>
-              <input type="number" name="ancho" class="form-control" id="ancho1">
-            </div>
-            <div class="mb-3">
-              <label for="estrato" class="form-label">Estrato</label>
-              <select class="form-select" name="estrato">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-            <button type="" class="btn btn-outline-info">Calcular</button>
-          </form>
+        <div class="row justify-content-md-center">
+          <div class="col-md-6">
+            <h1 class="text-center">LA LANGOSTA AHUMADA   </h1>
+            <form class="d-flex justify-content-center flex-column">
+              <div class="mb-3">
+                <label for="personas" class="form-label">Cantidad de personas:</label>
+                <input type="number" name="personas" class="form-control" id="personas1">
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><b>Plato por persona menor a 200 personas: $14.000</b> </label>
+                <label class="form-label"><b>Plato por persona entre 200 y 300 personas: $11.000</b> </label>
+                <label class="form-label"><b>Plato por persona mayor a 300 personas: $9.000</b> </label>
+              </div>
+              <?php 
+                $cantidadPersonas = $_POST['personas'];
+                $coste = 0;
+                if($cantidadPersonas<200){
+                  $coste = $cantidadPersonas*14000;
+                }elseif($cantidadPersonas>=200 and $cantidadPersonas<=300){
+                  $coste = $cantidadPersonas*11000;
+                }elseif($cantidadPersonas>=300){
+                  $coste = $cantidadPersonas*9000;
+                }
+              ?>
+              <button type="" class="btn btn-outline-danger">Calcular</button>
+              <div class="mb-3">
+                <label class="form-label"><b>El coste total es: $<?php echo $coste;?></b> </label>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

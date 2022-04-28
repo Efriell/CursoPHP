@@ -11,21 +11,29 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container-xxl" style="margin: 14% auto;">
+  <div class="container-xxl" style="margin: 14% auto;">
       <div class="row justify-content-md-center">
         <div class="col-md-6">
-          <h1 class="text-center">LA LANGOSTA AHUMADA   </h1>
-          <form action="./Servidores/Eje2.php" method="post" class="d-flex justify-content-center flex-column">
+          <h1 class="text-center">Uveria   </h1>
+          <form class="d-flex justify-content-center flex-column">
+            <?php 
+                $cantidadAlumnos = $_POST['cantidadAlumnos'];
+                $renta = 0;
+                $rentaTotal = 0;
+                if($cantidadAlumnos>=100){
+                    $renta = $cantidadAlumnos*6500;
+                }elseif($cantidadAlumnos>=50 and $cantidadAlumnos<=99){
+                    $renta = $cantidadAlumnos*7000;
+                }elseif($cantidadAlumnos>=30 and $cantidadAlumnos<=49){
+                    $renta = $cantidadAlumnos*9500;
+                }elseif($cantidadAlumnos<30){
+                    $renta = 400000/$cantidadAlumnos;
+                }
+                $rentaTotal = $renta*$cantidadAlumnos;
+            ?>
             <div class="mb-3">
-              <label for="personas" class="form-label">Cantidad de personas:</label>
-              <input type="number" name="personas" class="form-control" id="personas1">
+            <label class="form-label"><b>El coste de la renta del bus por persona es: $<?php echo $renta."<br>"."El precio total de la renta es: $".$rentaTotal;?></b></label>
             </div>
-            <div class="mb-3">
-              <label class="form-label"><b>Plato por persona menor a 200 personas: $14.000</b> </label>
-              <label class="form-label"><b>Plato por persona entre 200 y 300 personas: $11.000</b> </label>
-              <label class="form-label"><b>Plato por persona mayor a 300 personas: $9.000</b> </label>
-            </div>
-            <button type="" class="btn btn-outline-danger">Calcular</button>
           </form>
         </div>
       </div>
