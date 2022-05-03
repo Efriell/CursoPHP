@@ -45,7 +45,7 @@
                 <input type="text" name="movil" class="form-control rounded-circle" id="exampleInputMovil">
               </div>
               <div class="col">
-                <button type="submit" class="btn btn-secondary w-100 rounded-circle">Submit</button>
+                <button type="submit" class="btn btn-secondary w-100 rounded-circle">Guardar <i class="bi bi-download"></i></button>
               </div>
             </form>
           </div>
@@ -72,17 +72,38 @@
             foreach ($resultado as $i) {
             ?>
               <tr>
-                <td><?php echo $i[0]; ?> </td>
-                <td><?php echo $i[1]; ?> </td>
-                <td><?php echo $i[2]; ?> </td>
-                <td><?php echo $i[3]; ?> </td>
-                <td><?php echo $i[4]; ?> </td>
-                <td><?php echo $i[5]; ?> </td>
-                <td><?php echo $i[6]; ?> </td>
-                <td><a href="frmEditar.php?id=<?php echo $i[0] ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                <td><a href="frmEditar.php?id=<?php echo $i[0] ?>" type="button" class="btn btn-danger"><i class="bi bi-person-dash"></i></a></td>
+                <td><?php echo $i->Id; ?> </td>
+                <td><?php echo $i->Nombre; ?> </td>
+                <td><?php echo $i->Apellidos; ?> </td>
+                <td><?php echo $i->Email; ?> </td>
+                <td><?php echo $i->Telefono1; ?> </td>
+                <td><?php echo $i->Movil; ?> </td>
+                <td><?php echo $i->Activo; ?> </td>
+                <td><a href="frmEditar.php?id=<?php echo $i->Id ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-dash"></i></button></td>
               </tr>
             <?php } ?>
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade rounded-1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ¿Está seguro de eliminar el contacto?
+                  </div>
+                  <div class="modal-footer">
+                    <a href="Crud/borrarContacto.php?id=<?php echo $i->Id ?>" type="button" class="btn btn-danger">Eliminar <i class="bi bi-person-dash"></i></a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
           </tbody>
