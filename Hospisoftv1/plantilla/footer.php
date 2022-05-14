@@ -1,4 +1,13 @@
-
+      <div class="row mt-5 p-5 bg-black text-light">
+        <div class="col-md-6">
+          Mis redes
+        </div>
+        <div class="col-md-6 text-center">
+          Hospisofts <b>Versión 1.0 - PHP - MySql</b>
+          <br>
+          Desarrollado por  <b>Mateo Mogollon</b> &copy;2022  
+        </div>
+      </div>
 
    </main>
   </div>

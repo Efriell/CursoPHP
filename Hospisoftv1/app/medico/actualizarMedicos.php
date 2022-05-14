@@ -16,7 +16,7 @@ $sentencia = $pdo -> prepare($sql); //Preparar la consulta
 $sentencia -> execute([$nombre,$apellido,$email,$especialidad]);
 
 
-header('Location:../medicos.php')
+header('Location:../../medicos.php')
 
 
 ?>

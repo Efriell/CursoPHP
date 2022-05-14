@@ -12,7 +12,7 @@ $sentencia = $pdo -> prepare($sql); //Preparar la consulta
 $sentencia -> execute();
 
 
-header('Location:../index.php')
+header('Location:../../pacientes.php')
 
 
 ?>

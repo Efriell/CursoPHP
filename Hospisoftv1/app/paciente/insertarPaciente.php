@@ -5,18 +5,16 @@ require_once 'bd.php'; //Incluyo la cadena de conexion PHP
 //Hacer el proceso de request - reponse
 
 //Recibimos la data del formulario
-$id = $_POST['id'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $email = $_POST['email'];
-$especialidad = $_POST['especialidad'];
+$clave = $_POST['clave'];
 
-$sql = "update medico set nombre_medico=?, apellidos_medico=?, email=?, especialidad=? where id_medico={$id};";
+$sql = 'insert into medico (nombre_paciente,apellidos_paciente,email,clave) values (?,?,?,?);';
 $sentencia = $pdo -> prepare($sql); //Preparar la consulta
-$sentencia -> execute([$nombre,$apellido,$email,$especialidad]);
+$sentencia -> execute([$nombre,$apellido,$email,$clave]);
 
-
-header('Location:../medicos.php')
+header('Location:../../pacientes.php')
 
 
 ?>

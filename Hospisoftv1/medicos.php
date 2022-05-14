@@ -1,11 +1,11 @@
 <?php
 require_once 'plantilla/cabecera.php';
 ?>
-<!-- INICIO DEL CONTENIDO -->
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h5>Médicos</h5>
     </div>
+<!-- INICIO DEL CONTENIDO -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
@@ -57,7 +57,7 @@ require_once 'plantilla/cabecera.php';
                                 <td><?php echo $i->apellidos_medico; ?> </td>
                                 <td><?php echo $i->email; ?> </td>
                                 <td><?php echo $i->especialidad; ?> </td>
-                                <td><a href="./frmEditar.php?id=<?php echo $i->id_medico ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                <td><a href="./frmEditarMedicos.php?id=<?php echo $i->id_medico ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-dash"></i></button></td>
                             </tr>
                         <?php } ?>

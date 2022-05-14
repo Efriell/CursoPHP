@@ -11,8 +11,6 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    
-
     <!-- Bootstrap core CSS -->
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,17 +37,37 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Importaciones Arias</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">C.M. La4ta - Panel De Administración</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
-    </div>
-  </div>
+  <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link bg-dark text-light" aria-current="page" href="#">
+      <?php 
+        //Poner zona horaria
+        date_default_timezone_set('America/Bogota');
+        echo 'Fecha: '.date("d/m/Y h:i:s");
+      ?>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link bg-dark text-light" href="#"><i class="bi bi-person-circle">
+    <b>
+      <?php 
+        echo 'El usuario'; 
+      ?>
+      </b>
+    </i>
+      
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link bg-dark text-light" href="cerrarSistema.php"><i class="bi bi-box-arrow-right">  Salir del sistema</i></a>
+  </li>
+</ul>
 </header>
+
 
 <div class="container-fluid">
   <div class="row">

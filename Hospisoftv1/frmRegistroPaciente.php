@@ -58,77 +58,72 @@
                 </div>
             </div>
         </nav>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./images/hms.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block text-black">
-                        <h5>Laboratorios de última tecnología</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/hms2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block text-black">
-                        <h5>Médicos especialistas</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/hms3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block text-black">
-                        <h5>Atención Personalizada</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="row mt-3 p-3">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="./images/especialista.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Especialistas</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Ver más...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="./images/hospitaliza.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Servicio al cliente</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="./images/Microscopio.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Laboratorio</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-12 mt-3
+             text-center">
+                <h3>Registro del paciente</h3>
             </div>
         </div>
-        <div class="row mt-3 p-5 bg-dark text-white">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <form action="crud/insertarPaciente.php" method="POST">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" name="apellidos" id="apellidos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">email</label>
+                                <input type="text" class="form-control" name="email" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Telefono</label>
+                                <input type="text" class="form-control" name="telefono" id="telefono1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Movil" class="form-label">Movil</label>
+                                <input type="text" class="form-control" name="movil" id="movil">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="fechaNace" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" name="fechaNace" id="fechaNace">
+                        </div>
+                        <div class="mb-3">
+                            <label for="eps" class="form-label">E.P.S</label>
+                            <input type="text" class="form-control" name="eps" id="eps">
+                        </div>
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario del sistema</label>
+                            <input type="text" class="form-control" name="usuario" id="usuario">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="text" class="form-control" name="password" id="password">
+                        </div>
+                        <div class="mb-3 d-flex justify-content-evenly pt-4">
+                            <button type="submit" class="btn btn-primary w-50"><i class="bi bi-save-fill"></i> Guardar</button>
+                            <a class="btn btn-primary w-25" href="">Cancelar</a>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                Publicidad
+            </div>
+        </div>
+        <div class="row mt-5 mx-1 p-5 bg-dark text-white">
             <div class="col-md-6">
                 <i class="bi bi-hospital-fill"></i><br>
                 Cra 100 con 98 <br>
