@@ -1,5 +1,5 @@
 <?php 
-
+session_start(); //Activa la configuracion de arreglos para almacenar las sesiones
 //Conexion a la BD de la forma clásica
 
 //Usuario y clave de mysql

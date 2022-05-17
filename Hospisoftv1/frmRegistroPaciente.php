@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -68,7 +71,9 @@
             <div class="col-md-5">
                 <div class="card mt-3">
                     <div class="card-body">
-                        <form action="crud/insertarPaciente.php" method="POST">
+                        <h5 class="card-title">Registro de Pacientes</h5>
+                        <?php echo $resultado; ?>
+                        <form action="app/paciente/insertarPaciente.php" method="POST">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombres</label>
                                 <input type="text" class="form-control" name="nombre" id="nombre">
@@ -96,20 +101,20 @@
                 <div class="card mt-3">
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="fechaNace" class="form-label">Fecha de Nacimiento</label>
-                            <input type="date" class="form-control" name="fechaNace" id="fechaNace">
+                            <label for="fechaNac" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" name="fechaNac" id="fechaNace">
                         </div>
                         <div class="mb-3">
-                            <label for="eps" class="form-label">E.P.S</label>
-                            <input type="text" class="form-control" name="eps" id="eps">
+                            <label for="epsPaciente" class="form-label">E.P.S</label>
+                            <input type="text" class="form-control" name="epsPaciente" id="eps">
                         </div>
                         <div class="mb-3">
-                            <label for="usuario" class="form-label">Usuario del sistema</label>
-                            <input type="text" class="form-control" name="usuario" id="usuario">
+                            <label for="usuarioPaciente" class="form-label">Usuario del sistema</label>
+                            <input type="text" class="form-control" name="usuarioPaciente" id="usuario">
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="text" class="form-control" name="password" id="password">
+                            <label for="clave" class="form-label">Contraseña</label>
+                            <input type="text" class="form-control" name="clave" id="password">
                         </div>
                         <div class="mb-3 d-flex justify-content-evenly pt-4">
                             <button type="submit" class="btn btn-primary w-50"><i class="bi bi-save-fill"></i> Guardar</button>
