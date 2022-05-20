@@ -1,5 +1,6 @@
-<?php 
-    session_start();
+<?php
+session_start();
+error_reporting(0)
 ?>
 <!doctype html>
 <html lang="en">
@@ -68,11 +69,18 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-<?php echo $_SESSION['tipo']; ?> alert-dismissible fade show" role="alert">
+                    <?php echo $_SESSION['mensaje']; 
+                    session_unset();
+                    ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
             <div class="col-md-5">
                 <div class="card mt-3">
                     <div class="card-body">
                         <h5 class="card-title">Registro de Pacientes</h5>
-                        <?php echo $resultado; ?>
                         <form action="app/paciente/insertarPaciente.php" method="POST">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombres</label>

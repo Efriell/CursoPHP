@@ -14,7 +14,6 @@ $fechaNac =filter_var(trim($_POST['fechaNac']),FILTER_DEFAULT);
 $epsPaciente =filter_var(trim($_POST['epsPaciente']),FILTER_DEFAULT);
 $usuarioPaciente =filter_var(trim($_POST['usuarioPaciente']),FILTER_DEFAULT);
 $clave =password_hash(filter_var(trim($_POST['clave']),FILTER_DEFAULT),PASSWORD_DEFAULT);
-
 $clave = password_hash($clave,PASSWORD_DEFAULT);
 
 $sql = 'insert into paciente (nombrePaciente,apellidosPaciente,email,telefono,movil,fechaNac,epsPaciente,usuarioPaciente,clave) values (?,?,?,?,?,?,?,?,?);';
@@ -22,8 +21,14 @@ $sentencia = $pdo -> prepare($sql); //Preparar la consulta
 $sentencia -> execute([$nombre,$apellido,$email,$telefono,$movil,$fechaNac,$epsPaciente,$usuarioPaciente,$clave]);
 
 /* var_dump($sentencia->rowCount()); */
+if($sentencia->rowCount()>=1){
+    $_SESSION['tipo']="primary";
+    $_SESSION['mensaje']="Operacion exitosa";
+}else{
+    $_SESSION['tipo']="danger";
+    $_SESSION['mensaje']="Ha ocurrido un error en la inserción";
+}
 
-$resultado = $_SESSION['Insercion exitosa'];
 
 header('Location:../../frmRegistroPaciente.php')
 
