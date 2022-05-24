@@ -33,3 +33,6 @@
 # Archivos HTACCESS
 
     Me sirven para configurar el servidor web (APACHE) OJO existe otro servidor y es el NGINX (Este corre en linux) == dicen que es más rápido
+
+# SEGUNDO SPRINT
+    Libreria de reportes en pdf

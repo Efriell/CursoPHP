@@ -7,7 +7,7 @@ require_once 'bd.php'; //Incluyo la cadena de conexion PHP
 //Recibimos la data del formulario
 $id = $_GET['id'];
 
-$sql = "delete from medico where id_medico={$id};";
+$sql = "delete from medico where idMedico={$id};";
 $sentencia = $pdo -> prepare($sql); //Preparar la consulta
 $sentencia -> execute();
 

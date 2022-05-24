@@ -166,7 +166,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="app/paciente/validarSesionPaciente.php" method="POST">
                         <div class="mb-3">
                             <label for="usuario" class="form-label">Usuario: </label>
                             <input type="text" name="usuario" class="form-control" id="usuario" aria-describedby="Usuario">
@@ -174,15 +174,15 @@
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña: </label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" name="password" class="form-control" id="password">
                         </div>
                         <p class="w-100 text-center">¿Aún no tiene cuenta? <a href="frmRegistroPaciente.php">Registrese aquí.</a></p>
-                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <input type="reset" class="btn btn-secondary" value="Cancelar" data-bs-dismiss="modal">
+                    <input type="submit" value="Enviar" class="btn btn-primary">
                 </div>
+                </form>
             </div>
         </div>
     </div>

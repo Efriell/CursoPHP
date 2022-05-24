@@ -11,7 +11,7 @@ $apellido = $_POST['apellido'];
 $email = $_POST['email'];
 $especialidad = $_POST['especialidad'];
 
-$sql = "update medico set nombre_medico=?, apellidos_medico=?, email=?, especialidad=? where id_medico={$id};";
+$sql = "update medico set nombreMedico=?, apellidosMedico=?, email=?, especialidad=? where idMedico={$id};";
 $sentencia = $pdo -> prepare($sql); //Preparar la consulta
 $sentencia -> execute([$nombre,$apellido,$email,$especialidad]);
 

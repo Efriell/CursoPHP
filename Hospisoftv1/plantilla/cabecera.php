@@ -55,7 +55,8 @@
     <a class="nav-link bg-dark text-light" href="#"><i class="bi bi-person-circle">
     <b>
       <?php 
-        echo 'El usuario'; 
+        //session_start();
+        echo $_SESSION['usuarioActivo'];
       ?>
       </b>
     </i>

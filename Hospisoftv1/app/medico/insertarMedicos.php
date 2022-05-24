@@ -10,7 +10,7 @@ $apellido = $_POST['apellido'];
 $email = $_POST['email'];
 $especialidad = $_POST['especialidad'];
 
-$sql = 'insert into medico (nombre_medico,apellidos_medico,email,especialidad) values (?,?,?,?);';
+$sql = 'insert into medico (nombreMedico,apellidosMedico,email,especialidad) values (?,?,?,?);';
 $sentencia = $pdo -> prepare($sql); //Preparar la consulta
 $sentencia -> execute([$nombre,$apellido,$email,$especialidad]);
 
