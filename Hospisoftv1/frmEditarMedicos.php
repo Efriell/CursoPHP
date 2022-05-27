@@ -4,7 +4,7 @@ $id = $_GET['id'];
 // echo $id;
 
 require_once 'app/medico/bd.php';
-$sql = 'SELECT * FROM medico where id_medico = ?';
+$sql = 'SELECT * FROM medico where idMedico = ?';
 $sentencia = $pdo->prepare($sql);  //prepara consulta 
 $sentencia->execute([$id]); //ejecuta la sentencia sql
 $medico = $sentencia->fetch(PDO::FETCH_OBJ); //devuelve la fila con el resultado de la consulta
@@ -35,15 +35,15 @@ echo '</pre>'; */
                         <form action="app/medico/actualizarMedicos.php" method="POST">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Id</label>
-                                <input type="text" class="form-control" name="id" readonly value="<?php echo $medico->id_medico; ?>" id="id">
+                                <input type="text" class="form-control" name="id" readonly value="<?php echo $medico->idMedico; ?>" id="id">
                             </div>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" value="<?php echo $medico->nombre_medico; ?>" name="nombre" id="nombre">
+                                <input type="text" class="form-control" value="<?php echo $medico->nombreMedico; ?>" name="nombre" id="nombre">
                             </div>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" value="<?php echo $medico->apellidos_medico; ?>" name="apellido" id="apellidos">
+                                <input type="text" class="form-control" value="<?php echo $medico->apellidosMedico; ?>" name="apellido" id="apellidos">
                             </div>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Email</label>

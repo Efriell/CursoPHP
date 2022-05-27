@@ -50,15 +50,15 @@ require_once 'plantilla/cabecera.php';
                     <tbody>
                         <?php
                         require_once 'app/paciente/listarPaciente.php';
-                        foreach ($resultado as $i) {
+                        foreach ($pacientes as $i) {
                         ?>
                             <tr>
-                                <td><?php echo $i->id_paciente; ?> </td>
-                                <td><?php echo $i->nombre_paciente; ?> </td>
-                                <td><?php echo $i->apellidos_paciente; ?> </td>
+                                <td><?php echo $i->idPaciente; ?> </td>
+                                <td><?php echo $i->nombrePaciente; ?> </td>
+                                <td><?php echo $i->apellidosPaciente; ?> </td>
                                 <td><?php echo $i->email; ?> </td>
-                                <td><?php echo $i->clave; ?> </td>
-                                <td><a href="frmEditar.php?id=<?php echo $i->id_paciente ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                <td><?php echo $i->passwordPaciente; ?> </td>
+                                <td><a href="frmEditar.php?id=<?php echo $i->idPaciente ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-dash"></i></button></td>
                             </tr>
                         <?php } ?>

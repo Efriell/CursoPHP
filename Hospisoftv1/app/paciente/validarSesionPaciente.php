@@ -19,7 +19,8 @@ foreach ($paciente as $i) {
     if(!password_verify($password,$i->passwordPaciente)){
         header('Location:../../index.php');
     }else{
-        header('Location:../../panel.php');
         $_SESSION['usuarioActivo'] = $i->usuarioPaciente;
+        $_SESSION['idUsuario'] = $i->idPaciente;
+        header('Location:../../panelPaciente.php');
     }
 }

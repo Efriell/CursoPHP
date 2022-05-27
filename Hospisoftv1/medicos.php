@@ -52,12 +52,12 @@ require_once 'plantilla/cabecera.php';
                         foreach ($resultado as $i) {
                         ?>
                             <tr>
-                                <td><?php echo $i->id_medico; ?> </td>
-                                <td><?php echo $i->nombre_medico; ?> </td>
-                                <td><?php echo $i->apellidos_medico; ?> </td>
+                                <td><?php echo $i->idMedico; ?> </td>
+                                <td><?php echo $i->nombreMedico; ?> </td>
+                                <td><?php echo $i->apellidosMedico; ?> </td>
                                 <td><?php echo $i->email; ?> </td>
                                 <td><?php echo $i->especialidad; ?> </td>
-                                <td><a href="./frmEditarMedicos.php?id=<?php echo $i->id_medico ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                <td><a href="./frmEditarMedicos.php?id=<?php echo $i->idMedico ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-dash"></i></button></td>
                             </tr>
                         <?php } ?>
@@ -74,7 +74,7 @@ require_once 'plantilla/cabecera.php';
                                         ¿Está seguro de eliminar el Medico?
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="app/medico/borrarMedico.php?id=<?php echo $i->id_medico ?>" type="button" class="btn btn-danger">Eliminar <i class="bi bi-person-dash"></i></a>
+                                        <a href="app/medico/borrarMedico.php?id=<?php echo $i->idMedico ?>" type="button" class="btn btn-danger">Eliminar <i class="bi bi-person-dash"></i></a>
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>

@@ -34,5 +34,10 @@
 
     Me sirven para configurar el servidor web (APACHE) OJO existe otro servidor y es el NGINX (Este corre en linux) == dicen que es más rápido
 
-# SEGUNDO SPRINT
+# SEGUNDO SPRINT  24/05/2022
     Libreria de reportes en pdf
+    Registro de citas (llaves compuestas)
+    Listar la historia clinica de cada paciente
+    Imprimir cita
+    Listar medicos por especialidad
+    Actualizar Perfil
