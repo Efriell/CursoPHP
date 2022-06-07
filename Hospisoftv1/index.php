@@ -52,9 +52,10 @@
                             <a class="nav-link" href="#"><i class="bi bi-people-fill"> Contacto</i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#frmLogin" href="panel.php"><i class="bi bi-key-fill"> Login</i></a>
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#frmLogin"><i class="bi bi-key-fill"> Login pacientes</i></a>
                         </li>
                     </ul>
+                    <a class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#frmLoginMedico"><i class="bi bi-person-rolodex"> Médicos</i></a>
                 </div>
             </div>
         </nav>
@@ -155,9 +156,7 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Modal -->
+    <!-- Modal login paciente -->
     <div class="modal fade" id="frmLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -177,6 +176,35 @@
                             <input type="password" name="password" class="form-control" id="password">
                         </div>
                         <p class="w-100 text-center">¿Aún no tiene cuenta? <a href="frmRegistroPaciente.php">Registrese aquí.</a></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="reset" class="btn btn-secondary" value="Cancelar" data-bs-dismiss="modal">
+                    <input type="submit" value="Enviar" class="btn btn-primary">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal login medico -->
+    <div class="modal fade" id="frmLoginMedico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100 text-center" id="exampleModalLabel">Acceso de Medicos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="app/medico/validarSesionMedico.php" method="POST">
+                        <div class="mb-3">
+                            <label for="idMedico" class="form-label">Identificacion: </label>
+                            <input type="text" name="idMedico" class="form-control" id="idMedico" aria-describedby="Usuario">
+                            <div id="idMedico" class="form-text">Ingrese su usuario registrado en el sistema.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordMedico" class="form-label">Contraseña: </label>
+                            <input type="password" name="passwordMedico" class="form-control" id="passwordMedico">
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <input type="reset" class="btn btn-secondary" value="Cancelar" data-bs-dismiss="modal">

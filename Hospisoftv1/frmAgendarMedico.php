@@ -1,9 +1,9 @@
 <?php
 session_start();
 error_reporting(0);
-if (!isset($_SESSION['usuarioActivo'])) {
+/* if (!isset($_SESSION['usuarioActivo'])) {
     header('Location:index.php');
-} else {
+} else { */
     require_once 'app/medico/listarMedicos.php';
     require_once 'plantilla/cabeceraPaciente.php';
 ?>
@@ -76,5 +76,5 @@ if (!isset($_SESSION['usuarioActivo'])) {
         <!-- FIN DEL CONTENIDO -->
     <?php
     require_once 'plantilla/footer.php';
-};
+/* }; */
     ?>

@@ -1,10 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION['usuarioActivo'])){
+require_once 'plantilla/cabeceraPaciente.php';
+/* if(!isset($_SESSION['usuarioActivo'])){
     header('Location:index.php');
 }else{
     require_once 'plantilla/cabeceraPaciente.php';
-
+ */
 ?>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -34,5 +35,5 @@ if(!isset($_SESSION['usuarioActivo'])){
     <!-- FIN DEL CONTENIDO -->
     <?php
         require_once 'plantilla/footer.php';
-        };
+        /* }; */
     ?>
