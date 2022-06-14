@@ -1,0 +1,46 @@
+<?php
+
+/**
+*Clase Base del proyecto
+*@author Mateo
+*@version 1.0 junio de 2022
+*@copyright Efriell s.a.s 
+**/
+
+class Persona
+{
+    //atributos de la clase
+    //tenga en cuenta la visibilidad de los atributos
+    private string $usuario;
+    private string $contraseña;
+    private string $correo;
+    private string $tipoIdentificacion;
+    private string $numIdentificacion;
+    private string $celular;
+    private string $telefono;
+    private string $grado;
+
+    //métodos de la clase 
+    //método mágico para crear la clase - metodo constructor (setter)
+    public function __construct($usuario,$contraseña,$correo,$tipoIdentificacion,$numIdentificacion, $celular, $telefono, $grado)
+    {
+        $this->usuario = $usuario;            
+        $this->contraseña = $contraseña;            
+        $this->correo = $correo;
+        $this->tipoIdentificacion = $tipoIdentificacion;
+        $this->numIdentificacion = $numIdentificacion;
+        $this->$celular = $celular;
+        $this->$telefono = $telefono;
+        $this->$grado = $grado;
+    }
+
+    //metodo getter
+    //return string
+    public function iniciarSesión()
+    {
+        return "Ha ingresado en el sistema".$this->usuario;
+    }
+}
+
+$mateo = new Persona("Mateo","123","mateomogollon00@gmail.com","Tarjeta de identidad","1110458649","3024361386","",null);
+$mateo->iniciarSesión();
