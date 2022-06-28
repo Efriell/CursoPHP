@@ -4,7 +4,6 @@ Clase base que arma las rutas del mvc
 controlador/metodo/parametro
 Ej: medico/crearFormulaMedica/$id
 */
-
 class Core
 {
     //setear los controladores, metodos, y parametros inciales del MVC
